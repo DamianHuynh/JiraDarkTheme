@@ -26,7 +26,7 @@ regexp(".*.atlassian.net/secure.*") {
         --ds-background-subtleNeutral-resting: #111;
         --ds-background-brand-bold: #8ec4fd;
         --ds-background-neutral-bold: #aaa;
-        --ds-UNSAFE_util-transparent: #333
+        --ds-UNSAFE_util-transparent: #333;
 
         --ds-background-information-bold: #8ec4fd;
         --ds-background-success-bold: #b1deb4;
