@@ -1,15 +1,15 @@
 /* ==UserStyle==
 @name         Jira Dark Gray
-@namespace    github.com/aalvarado
+@namespace    github.com/dathuynh2797
 @version      1.14.4
 @license      BSD
-@author       @aalvarado
+@author       @DatHuynh
 @preprocessor default
 
 ==/UserStyle== */
 @-moz-document regexp(".*.atlassian.net/jira.*"),
 regexp(".*.atlassian.net/browse.*"),
-regexp(".*.atlassian.net/secure.*") {
+regexp(".*.atlassian.net/secure.*"){
     :root {
         --ds-background-default: #333;
         --ds-background-neutral: #222;
@@ -20,7 +20,7 @@ regexp(".*.atlassian.net/secure.*") {
         --ds-background-neutral-subtle-hovered: #555;
         --ds-background-input: #333;
         --ds-background-input-hovered: #444;
-        
+
         --ds-background-input-pressed: #333;
         --ds-background-disabled: #444;
         --ds-background-subtleNeutral-resting: #111;
@@ -54,24 +54,77 @@ regexp(".*.atlassian.net/secure.*") {
 
         --ds-link: #429eff;
     }
-    
-    html {
-      scrollbar-face-color: #646464;
-      scrollbar-base-color: #646464;
-      scrollbar-3dlight-color: #646464;
-      scrollbar-highlight-color: #646464;
-      scrollbar-track-color: #000;
-      scrollbar-arrow-color: #000;
-      scrollbar-shadow-color: #646464;
-      scrollbar-dark-shadow-color: #646464;
+
+    ::-webkit-scrollbar {
+        width: 8px;
+        height: 3px;
+    }
+    ::-webkit-scrollbar-button {
+        background-color: #666;
+    }
+    ::-webkit-scrollbar-track {
+        background-color: #646464;
+    }
+    ::-webkit-scrollbar-track-piece {
+        background-color: #000;
+    }
+    ::-webkit-scrollbar-thumb {
+        height: 50px;
+        background-color: #666;
+        border-radius: 3px;
+    }
+    ::-webkit-scrollbar-corner {
+        background-color: #646464;
+    }
+    ::-webkit-resizer {
+        background-color: #666;
     }
 
-    ::-webkit-scrollbar { width: 8px; height: 3px;}
-    ::-webkit-scrollbar-button {  background-color: #666; }
-    ::-webkit-scrollbar-track {  background-color: #646464;}
-    ::-webkit-scrollbar-track-piece { background-color: #000;}
-    ::-webkit-scrollbar-thumb { height: 50px; background-color: #666; border-radius: 3px;}
-    ::-webkit-scrollbar-corner { background-color: #646464;}}
-    ::-webkit-resizer { background-color: #666;}
+}
+
+@-moz-document regexp(".*.atlassian.net/wiki.*") {
     
+    #full-height-container {
+        filter: invert(100%) hue-rotate(180deg) !important;
+        -webkit-filter: invert(100%) hue-rotate(180deg) !important;
+    }
+
+    #header {
+        filter: invert(100%) hue-rotate(180deg) !important;
+        -webkit-filter: invert(100%) hue-rotate(180deg) !important;
+    }
+
+    header.aui-page-header {
+        background-color: #fff !important;
+    }
+
+    #announcement-banner {
+        margin: 0px !important;
+        padding: 0px !important;
+    }
+
+    html {
+        background-color: #000;
+    }
+
+    #main {
+        -webkit-text-stroke: 0.5px;
+    }
+
+    a.confluence-userlink.current-user-mention,
+    .aui-lozenge {
+        -webkit-text-stroke: 0;
+    }
+
+    img,
+    .aui-avatar-inner {
+        filter: invert(100%) hue-rotate(180deg);
+        -webkit-filter: invert(100%) hue-rotate(180deg);
+    }
+
+    #cp-img {
+        filter: invert(0%) hue-rotate(180deg);
+        -webkit-filter: invert(0%) hue-rotate(180deg);
+    }
+
 }
